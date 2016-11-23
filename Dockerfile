@@ -6,4 +6,5 @@ ENV TIMEZONE America/Sao_Paulo
 
 RUN apk add --no-cache make gcc g++ python linux-headers libc6-compat bind-tools tzdata && \
 cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \ 
-echo "${TIMEZONE}" > /etc/timezone 
+echo "${TIMEZONE}" > /etc/timezone && \
+npm install -g yarn
