@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:4.6
+FROM mhart/alpine-node:6.9.4
 MAINTAINER  Weslley Camilo
 
 ENV TIMEZONE America/Sao_Paulo
