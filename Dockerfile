@@ -18,4 +18,6 @@ apk update && apk add wget ca-certificates &&\
 wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-php5-mongo/master/sgerrand.rsa.pub &&\
 wget https://github.com/sgerrand/alpine-pkg-php5-mongo/releases/download/1.16.4-r0/php5-mongo-1.6.14-r0.apk --no-check-certificate &&\
 apk add php5-mongo-1.6.14-r0.apk --allow-untrusted &&\
+wget https://github.com/kelseyhightower/confd/releases/download/v0.13.0/confd-0.13.0-linux-amd64 -O /usr/local/bin/confd &&\
+chmod +x /usr/local/bin/confd &&\
 rm php5-mongo-1.6.14-r0.apk
