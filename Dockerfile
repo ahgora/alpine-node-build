@@ -1,5 +1,5 @@
 FROM mhart/alpine-node:6.11.3
-MAINTAINER  Weslley Camilo
+MAINTAINER  Ahgora Sistemas
 
 ENV TIMEZONE America/Sao_Paulo
 
