@@ -19,6 +19,13 @@ wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sger
 wget https://github.com/sgerrand/alpine-pkg-php5-mongo/releases/download/1.16.4-r0/php5-mongo-1.6.14-r0.apk --no-check-certificate &&\
 apk add php5-mongo-1.6.14-r0.apk --allow-untrusted &&\
 sed -i 's/^memory_limit = 128M$/memory_limit = 1536M/' /etc/php5/php.ini &&\
+sed -i 's/^max_execution_time = 30$/max_execution_time = 500/'  /etc/php5/php.ini &&\
+sed -i 's/^post_max_size = 8M$/post_max_size = 100M/' /etc/php5/php.ini &&\
+sed -i 's/^upload_max_filesize = 2M$/upload_max_filesize = 100M/' /etc/php5/php.ini &&\
+sed -i 's/^default_socket_timeout = 60$/default_socket_timeout = 120/' /etc/php5/php.ini &&\
+sed -i 's/^session.gc_maxlifetime = 1440$/session.gc_maxlifetime = 7200/' /etc/php5/php.ini &&\
+sed -i 's/^short_open_tag = Off$/short_open_tag = On/' /etc/php5/php.ini &&\
+sed -i 's/^; max_input_vars = 1000$/max_input_vars = 20000/' /etc/php5/php.ini &&\
 wget https://github.com/kelseyhightower/confd/releases/download/v0.13.0/confd-0.13.0-linux-amd64 -O /usr/local/bin/confd &&\
 chmod +x /usr/local/bin/confd &&\
 rm php5-mongo-1.6.14-r0.apk
